@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(100, 184, 131, 1) 0%, rgba(0, 212, 255, 1)100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* estilização da exibição das tarefas */
+.container {
+    border: 1px solid #FFF;
+    padding: 30px 40px;
+    width: 40%;
+    min-width: 500px;
+}
+
+.new-task-container {
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    padding: 30px 20px;
+}
+
+.new-task-container input {
+    flex: 3;
+    font-size: 1rem;
+    border: 1px solid #D1D3D4;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: 500;
+}
+
+/* estilização quando o campo de digitação estivar "clicado" */
+.new-task-container input:focus {    
+   border-color: #41B883;
+   outline: none;
+}
+
+.add-new-task {
+    flex: 1;
+    border-radius: 5px;
+    font-weight: 500;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    background-color: #41B883;
+    color: #FFF;
+    padding: 12px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.tasks-added {
+    background-color: #FFF;
+    border-radius: 5px;  
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+    margin-top: 60px;
+    padding: 30px 20px;
+    width: 100%;
+}
+
+/* class error criada através do js */
+.error {
+    border: 1px solid red !important;
+}
+
+.error::placeholder {
+    color: red;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    cursor: default;
+}
+
+.task-item i {
+    background-color: #41B883;
+    color: #FFF;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #41B883;
+}
